@@ -15,3 +15,5 @@ jobs:
         dotnet-version: 3.0.100
     - name: Build
       run: dotnet build
+    - name: Run
+      run: dotnet run dotnet-test.csproj --no-build
