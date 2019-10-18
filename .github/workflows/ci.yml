@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runs-on: [macOS-latest, windows-latest]
+        runs-on: [windows-2016]
     
     steps:
     - uses: actions/checkout@v1
@@ -23,4 +23,6 @@ jobs:
     - name: Build
       run: dotnet build
     - name: Run
-      run: dotnet run dotnet-test.csproj --no-build --framework netcoreapp3.0
+      run: dotnet run dotnet-test.csproj --no-build
+      env:
+        DOTNET_ROOT: C:\hostedtoolcache\windows\dncs\3.0.100\x64
