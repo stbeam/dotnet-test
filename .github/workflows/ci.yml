@@ -24,3 +24,6 @@ jobs:
       run: dotnet build
     - name: Run
       run: dotnet run dotnet-test.csproj --no-build
+      env:
+        key: DOTNET_ROOT
+        value: $DOTNET_ROOT/3.0.100/x64
