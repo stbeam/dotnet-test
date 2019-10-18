@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runs-on: [macOS-latest, windows-latest]
+        runs-on: [macOS-latest]
     
     steps:
     - uses: actions/checkout@v1
@@ -27,4 +27,4 @@ jobs:
         echo $DOTNET_ROOT
         dotnet run dotnet-test.csproj --no-build
       env:
-        DOTNET_ROOT: $DOTNET_ROOT/3.0.100/x64
+        DOTNET_ROOT: /Users/runner/hostedtoolcache/dncs/3.0.100/x64
