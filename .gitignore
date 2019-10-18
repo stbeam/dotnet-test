@@ -1,0 +1,12 @@
+**/bin
+**/obj
+**/libs
+**/*.xproj
+**/*.xproj.user
+**/.vs
+**/.vscode
+**/*.error
+project.lock.json
+**/.DS_Store
+/drop
+**/TestResults
