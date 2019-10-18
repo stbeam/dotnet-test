@@ -5,7 +5,12 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macOS-latest
+    name: ${{ matrix.runs-on }}
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runs-on: [macOS-latest, windows-latest]
     
     steps:
     - uses: actions/checkout@v1
@@ -13,6 +18,8 @@ jobs:
       uses: actions/setup-dotnet@master
       with:
         dotnet-version: 3.0.100
+    - name: dotnet --info
+      run: dotnet --info
     - name: Build
       run: dotnet build
     - name: Run
