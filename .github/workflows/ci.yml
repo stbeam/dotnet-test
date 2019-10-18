@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@master
       with:
-        dotnet-version: 3.0.100
+        dotnet-version: 3.0.0
     - name: dotnet --info
       run: dotnet --info
     - name: Build
