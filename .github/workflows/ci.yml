@@ -23,6 +23,8 @@ jobs:
     - name: Build
       run: dotnet build
     - name: Run
-      run: dotnet run dotnet-test.csproj --no-build
+      run: |
+        echo $DOTNET_ROOT
+        dotnet run dotnet-test.csproj --no-build
       env:
         DOTNET_ROOT: $DOTNET_ROOT/3.0.100/x64
