@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runs-on: [windows-2016]
+        runs-on: [windows-latest,ubuntu-latest]
     
     steps:
     - uses: actions/checkout@v1
