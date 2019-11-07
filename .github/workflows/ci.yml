@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        runs-on: [windows-latest,ubuntu-latest]
+        runs-on: [windows-latest-xl,ubuntu-latest-xl]
     
     steps:
     - uses: actions/checkout@v1
